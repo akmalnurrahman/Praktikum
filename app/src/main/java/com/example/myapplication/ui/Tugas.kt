@@ -42,19 +42,21 @@ fun getScreenHeight(): Int {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun avenger() {
-    val surfaceWidth = getScreenWidth() * 0.12681;
-    val surfaceHeight = getScreenHeight() * 0.1905;
+    val surfaceWidth = getScreenWidth()
+    val surfaceHeight = getScreenHeight()
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .fillMaxHeight()
+        modifier = Modifier.fillMaxHeight()
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.weight(1f)
+
         ) {
             Surface(
                 color = Color(0xff004170),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                        .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -80,6 +82,7 @@ fun avenger() {
             Surface(
                 color = Color(0xfffffff),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                    .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -104,6 +107,7 @@ fun avenger() {
             Surface(
                 color = Color(0xFF70964B),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                    .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -129,11 +133,13 @@ fun avenger() {
             }
         }
         Row(
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
+               modifier = Modifier.weight(1f)
         ) {
             Surface(
                 color = Color(0xFFAA0505),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                    .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -160,6 +166,7 @@ fun avenger() {
             Surface(
                 color = Color(0xFF404B56),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                    .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -186,6 +193,7 @@ fun avenger() {
             Surface(
                 color = Color(0xFF000000),
                 modifier = Modifier.size(surfaceWidth.dp, surfaceHeight.dp)
+                    .weight(1f)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
